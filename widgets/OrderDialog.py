@@ -36,8 +36,8 @@ class OrderDialog(QDialog, Ui_OrderDialog):
         self.client_combo.setCurrentIndex(client_index)
 
         self.address_edit.setText(str(d.get("delivery_address")))
-        self.order_date.setDate(datetime.date.strptime(str(d.get("order_date")), "%Y-%m-%d"))
-        self.delivery_date.setDate(datetime.date.strptime(str(d.get("delivery_date")), "%Y-%m-%d"))
+        self.order_date.setDate(datetime.date.fromisoformat(str(d.get("order_date"))))
+        self.delivery_date.setDate(datetime.date.fromisoformat(str(d.get("delivery_date"))))
 
     def load_combos(self):
         statuses = self.db.get_statuses()
