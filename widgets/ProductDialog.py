@@ -6,7 +6,7 @@ from database import Database
 from ui_py import Ui_ProductDialog
 from PyQt6.QtWidgets import QDialog, QFileDialog, QMessageBox
 from PyQt6.QtCore import Qt, QSize
-from utiity import _ensure_pixmap, IMAGES_DIR
+from utility import ensure_pixmap as _ensure_pixmap, IMAGES_DIR
 
 
 class ProductDialog(QDialog, Ui_ProductDialog):
